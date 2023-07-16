@@ -1,0 +1,81 @@
+body {
+    background-color: rgb(236, 249, 222);
+    margin: 0;
+}
+h1, h2 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: blue;
+}
+a:hover {
+    color: skyblue;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.firstWrap {
+    background-color: rgb(165, 209, 237);
+}
+.image {
+    margin-bottom: 20px;
+}
+/* версия компьютера */
+@media only screen and (min-width: 1440px) {
+    .image {
+        width: 450px;
+    }
+}
+/* версия ноутбука */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .image {
+        width: 400px;
+    }
+}
+/* версия планшета */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .image {
+        width: 350px;
+    }
+}
+/* мобильное разрешение */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .image {
+        width: 250px;
+    }
+    .box {
+        width: 200px;
+    }
+}
+/* отдельно для box */
+@media only screen and (min-width: 768px) {
+    .box {
+        width: 400px;
+    }
+}
+.title {
+    color: red;
+    margin-bottom: 10px;
+}
+.box {
+    background-color: rgb(199, 245, 238);
+    padding: 20px;
+    /* width: 400px; */
+    margin-bottom: 30px;
+    /* dashed - пунктир, solid - сплошной цвет */
+    border: 5px dashed antiquewhite;
+}
+.text {
+    font-size: 20px;
+    position: relative;
+}
+.text::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+}
